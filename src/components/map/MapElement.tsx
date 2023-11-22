@@ -7,13 +7,12 @@ import React, {
 import { Layer } from "../../map/layers";
 import "./MapElement.scss";
 
-export const MapDirection = {
-  Up: -1,
-  Down: 1,
-  Left: 1,
-  Right: -1,
-} as const;
-export type MapDirectionEnum = (typeof MapDirection)[keyof typeof MapDirection];
+export enum MapDirection {
+  Up = 1,
+  Down = -1,
+  Left = -1,
+  Right = 1,
+}
 
 type RawMapPosition = {
   x: number;
@@ -97,10 +96,13 @@ function getMapPositionAsCoords(position: MapPosition): RawMapPosition {
 }
 
 export function equallySpace(
-  direction: MapDirectionEnum,
+  direction: MapDirection,
   quadrantWidth: number,
   ratio: number,
-  start: number = 0
+  start: number = 0,
+  index: number = 1
 ) {
-  return direction * start - (quadrantWidth + direction * start) / ratio;
+  const effectiveWidth = quadrantWidth - Math.abs(start);
+
+  return start + (effectiveWidth / ratio) * direction * index;
 }

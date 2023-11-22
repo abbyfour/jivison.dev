@@ -1,0 +1,68 @@
+.Project {
+  &:not(:last-child) {
+    border-bottom: 6px #001f39 solid;
+  }
+
+  margin-top: 2em;
+
+  .title {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5em;
+  }
+
+  .description {
+    line-height: 1.2em;
+  }
+
+  .previewImage {
+    margin-bottom: 2em;
+  }
+
+  a {
+    color: #2492ee !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Project.large {
+  .previewImage {
+    width: 100%;
+  }
+
+  .description {
+    margin-bottom: 1em;
+  }
+}
+
+.Project.small {
+  display: flex;
+
+  .projectContent {
+    order: 2;
+  }
+
+  &.left {
+    text-align: left;
+
+    img {
+      order: 1;
+      margin-right: 1em;
+    }
+  }
+
+  &.right {
+    text-align: right;
+
+    img {
+      order: 3;
+      margin-left: 1em;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.HomeOverlay {
+  margin: 3em;
+  width: 40%;
+  min-width: fit-content;
+
+  .heading,
+  .subheading {
+    font-weight: bold;
+  }
+
+  .heading {
+    color: white;
+    background: rgba(0, 52, 95, 0.9);
+    padding: 1em;
+  }
+
+  .content {
+    background: rgba(253, 253, 253, 0.95);
+    padding: 1em;
+
+    .subheading {
+      padding: 1em;
+      border-radius: 1px;
+      background: #dee3ec;
+      width: fit-content;
+      margin-right: 1em;
+
+      h4 {
+        margin-right: 2em;
+      }
+    }
+
+    .description {
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+
+    .services {
+      margin-left: 1em;
+      margin-top: 0.5em;
+      display: grid;
+      align-items: center;
+      grid-template-columns: max-content 175px auto;
+      grid-template-rows: repeat(2, 1.5fr);
+      row-gap: 0.2rem;
+      column-gap: 0.6rem;
+      width: 100%;
+
+      .serviceName {
+        font-weight: 700;
+        font-size: 16px;
+        padding: 0.4rem;
+      }
+
+      .serviceName.yellow {
+        background-color: #fed20a;
+      }
+
+      .serviceName.orange {
+        background-color: #ffb50a;
+      }
+
+      .serviceName.red {
+        background-color: #ff6571;
+        color: white;
+      }
+
+      .serviceDescription {
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+}

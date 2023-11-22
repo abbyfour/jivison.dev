@@ -1,0 +1,26 @@
+.DesignOverlay {
+  margin: auto;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  width: 40%;
+  background: #f8f8f8;
+  padding: 3em;
+  padding-bottom: 0px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+
+  > .heading {
+    border-radius: 1px;
+    background: #00345f;
+    color: white;
+    padding: 1.5em;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+  }
+}

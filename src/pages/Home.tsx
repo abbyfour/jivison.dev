@@ -13,6 +13,7 @@ import {
 import { Line } from "../components/map/transit/Line";
 import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { HomeOverlay } from "../components/overlays/HomeOverlay";
 import { Lines } from "../map/lines";
 
 export function Home() {
@@ -74,7 +75,6 @@ export function Home() {
             x: equallySpace(MapDirection.Left, quadrantWidth, 2, -190),
             y: -239,
           })}
-          orientation={-45}
         />
 
         <StationLabel
@@ -96,7 +96,6 @@ export function Home() {
             x: -84,
             y: equallySpace(MapDirection.Down, quadrantHeight, 2, -259),
           })}
-          orientation={-45}
         />
 
         <StationLabel
@@ -114,17 +113,16 @@ export function Home() {
         <Station
           src={singleYellowLineStation}
           name="transit maps & design projects station"
-          position={({ height: quadrantHeight }) => ({
+          position={() => ({
             x: 451,
             y: 359,
           })}
-          orientation={-45}
         />
 
         <StationLabel
           label={["Transit Maps &", "Design Projects"]}
           linkTo="/design"
-          position={({ height: quadrantHeight }) => ({
+          position={() => ({
             x: 291,
             y: 399,
           })}
@@ -141,6 +139,8 @@ export function Home() {
           position={{ x: -100, y: 610 }}
         />
       </Map>
+
+      <HomeOverlay />
     </div>
   );
 }
