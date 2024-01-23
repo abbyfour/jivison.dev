@@ -31,7 +31,7 @@ export const DesignOverlay: FunctionComponent = () => {
               This map was inspired by iconic Tube Map designer{" "}
               <a
                 href="https://uploads-ssl.webflow.com/5da734bbb8be40161936b461/61c67bf62392ae1031b5c596_gd-risd-history-landmark.pdf"
-                target="black"
+                target="blank"
               >
                 Harry Beck’s 1933 map
               </a>
@@ -80,7 +80,7 @@ export const DesignOverlay: FunctionComponent = () => {
               @whatchyamacallit’s{" "}
               <a
                 href="https://www.behance.net/gallery/185086659/Vignelli-Style-Rapid-Transit-Maps-Vancouver-Calgary"
-                target="black"
+                target="blank"
               >
                 Vancouver and Calgary
               </a>{" "}

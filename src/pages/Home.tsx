@@ -61,10 +61,10 @@ export function Home() {
         <StationLabel
           interchange
           label="About Me"
-          linkTo="/about"
+          linkTo="/about-me"
           position={{ x: 98, y: 135 }}
           align="right"
-          servedLines={[Lines.red, Lines.orange, Lines.yellow]}
+          servedLines={[Lines.orange, Lines.yellow]}
         />
 
         {/* Blog */}

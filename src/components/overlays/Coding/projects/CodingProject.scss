@@ -1,0 +1,46 @@
+.CodingProject {
+  margin-bottom: 2em;
+
+  .title {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5em;
+
+    h4 {
+      font-weight: bold;
+    }
+
+    .date {
+      margin-left: 0.75em;
+      color: #576169;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+  }
+
+  .Links {
+    display: flex;
+    margin-bottom: 0.5em;
+
+    .Link {
+      color: #2492ee;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .separator {
+      margin: 0 0.5em;
+    }
+  }
+
+  ul {
+    list-style-type: initial;
+    margin-left: 1em;
+
+    li {
+      margin-bottom: 0.4em;
+    }
+  }
+}
