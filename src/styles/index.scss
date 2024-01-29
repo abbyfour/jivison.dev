@@ -7,6 +7,14 @@ html {
   font-family: Helvetica Neue;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 h1 {
   font-size: 5.61rem;
 }
@@ -32,10 +40,29 @@ small {
   font-size: 0.75rem;
 }
 
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
+.mobile {
+  h1 {
+    font-size: 3.73rem;
+  }
+  h2 {
+    font-size: 2.94rem;
+  }
+  h3 {
+    font-size: 2.17rem;
+  }
+  h4 {
+    font-size: 1.66rem;
+  }
+  h5 {
+    font-size: 1.249rem;
+  }
+  h6 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  small {
+    font-size: 0.6rem;
+  }
 }

@@ -110,3 +110,21 @@
     }
   }
 }
+
+.mobile {
+  .ContactOverlay {
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 6em;
+    width: 90%;
+    min-width: 0px;
+
+    .services {
+      line-height: 1.5em;
+    }
+  }
+
+  .ContactService {
+    padding-bottom: 1.9px;
+  }
+}

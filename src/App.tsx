@@ -1,21 +1,45 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AboutMe } from "./pages/AboutMe";
-import { Coding } from "./pages/Coding";
-import { Contact } from "./pages/Contact";
-import { Design } from "./pages/Design";
-import { Home } from "./pages/Home";
+import { useAtom } from "jotai";
+import { useCallback, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { DesktopRoutes } from "./DesktopRoutes";
+import { MobileRoutes } from "./MobileRoutes";
+import { windowHeightAtom, windowWidthAtom } from "./atoms";
 
 function App() {
+  const [, setWindowWidth] = useAtom(windowWidthAtom);
+  const [, setWindowHeight] = useAtom(windowHeightAtom);
+
+  const listener = useCallback(() => {
+    if (window.screen.availWidth < 760) {
+      setWindowWidth(window.screen.availWidth);
+      setWindowHeight(window.screen.availHeight);
+    } else {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    }
+  }, [setWindowHeight, setWindowWidth]);
+
+  useEffect(() => {
+    listener();
+  }, [listener]);
+
+  useEffect(() => {
+    window.addEventListener("resize", listener);
+
+    return () => {
+      window.removeEventListener("resize", listener);
+    };
+  }, [listener]);
+
+  const isMobile = window.innerWidth <= 760;
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/design" element={<Design />} />
-        <Route path="/coding" element={<Coding />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <div className={isMobile ? "mobile" : ""}>
+      <BrowserRouter>
+        {!isMobile && <DesktopRoutes />}
+        {isMobile && <MobileRoutes />}
+      </BrowserRouter>
+    </div>
   );
 }
 

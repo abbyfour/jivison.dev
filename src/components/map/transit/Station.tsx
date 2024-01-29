@@ -18,13 +18,13 @@ export const Station: FunctionComponent<Props> = ({
   ...rest
 }) => {
   return (
-    <MapElement
-      className="Station"
-      style={{ transform: `rotate(${orientation}deg)` }}
-      layer={Layer.Stations}
-      {...rest}
-    >
-      <img src={src} alt={name} className="Station-img" />
+    <MapElement className="Station" layer={Layer.Stations} {...rest}>
+      <img
+        style={{ transform: `rotate(${orientation}deg)` }}
+        src={src}
+        alt={name}
+        className="Station-img"
+      />
 
       {children}
     </MapElement>

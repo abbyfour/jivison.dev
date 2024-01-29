@@ -20,6 +20,7 @@
 
   .Links {
     display: flex;
+    align-items: center;
     margin-bottom: 0.5em;
 
     .Link {
@@ -42,5 +43,11 @@
     li {
       margin-bottom: 0.4em;
     }
+  }
+}
+
+.mobile {
+  .separator {
+    font-size: 0.5em;
   }
 }

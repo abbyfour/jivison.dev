@@ -1,3 +1,13 @@
 .MapElement {
   z-index: -1;
 }
+
+.mobile {
+  .MapElement {
+    transform: scale(0.9);
+
+    &.Station {
+      transform: scale(0.7);
+    }
+  }
+}

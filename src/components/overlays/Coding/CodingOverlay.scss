@@ -51,3 +51,33 @@
     }
   }
 }
+
+.mobile {
+  .CodingOverlay {
+    margin: auto;
+    margin-top: 6em;
+    margin-bottom: 0;
+    width: 90%;
+    min-width: 0px;
+
+    > .heading {
+      padding: 1em 1em;
+
+      .title {
+        line-height: 1.1em;
+      }
+
+      .subtitle {
+        font-weight: 700;
+        color: #4fbfce;
+        margin-top: 0.5em;
+        font-size: 1.1em;
+      }
+    }
+
+    .projects {
+      padding: 1em;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -20,7 +20,7 @@ export const HomeOverlay: FunctionComponent = () => {
         <p className="description">
           SFU Software Systems student.
           <br /> Templeton STEM alum.
-          <br /> Proudly based in Vancouver, BC
+          <br /> Proudly based in Vancouver, BC.
         </p>
 
         <div className="services">

@@ -11,6 +11,7 @@ type Props = PropsWithChildren<
     interchange?: boolean;
     linkTo?: string;
     servedLines: Line[];
+    wrap?: boolean;
   } & MapElementProps
 >;
 
@@ -20,6 +21,7 @@ export const StationLabel: FunctionComponent<Props> = ({
   align = "center",
   interchange = false,
   linkTo,
+  wrap,
   servedLines,
   ...rest
 }) => {
@@ -27,7 +29,7 @@ export const StationLabel: FunctionComponent<Props> = ({
 
   return (
     <MapElement
-      className="StationLabel"
+      className={`StationLabel ${wrap ? "wrap" : ""}`}
       id={`station-${label}`}
       style={{
         fontWeight: interchange ? "bold" : "initial",
@@ -43,6 +45,7 @@ export const StationLabel: FunctionComponent<Props> = ({
       ) : (
         <p>{getString(label)}</p>
       )}
+
       <div
         className="hover-underline"
         style={{

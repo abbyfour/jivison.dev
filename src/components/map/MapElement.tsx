@@ -1,9 +1,11 @@
+import { useAtom } from "jotai";
 import React, {
   FunctionComponent,
   PropsWithChildren,
   useEffect,
   useState,
 } from "react";
+import { windowHeightAtom, windowWidthAtom } from "../../atoms";
 import { Layer } from "../../map/layers";
 import "./MapElement.scss";
 
@@ -40,21 +42,23 @@ export const MapElement: FunctionComponent<Props> = ({
   layer = Layer.Default,
   ...rest
 }) => {
+  const [windowWidth] = useAtom(windowWidthAtom);
+  const [windowHeight] = useAtom(windowHeightAtom);
+
   const [htmlPosition, setHtmlPosition] = useState(
-    calculateTopAndLeft(position)
+    calculateTopAndLeft({ height: windowHeight, width: windowWidth }, position)
   );
 
   useEffect(() => {
-    const listener = () => {
-      setHtmlPosition(calculateTopAndLeft(position));
-    };
+    setHtmlPosition(
+      calculateTopAndLeft(
+        { width: windowWidth, height: windowHeight },
+        position
+      )
+    );
 
-    window.addEventListener("resize", listener);
-
-    return () => {
-      window.removeEventListener("resize", listener);
-    };
-  }, [position]);
+    return () => {};
+  }, [windowWidth, windowHeight, position]);
 
   return (
     <div
@@ -72,23 +76,29 @@ export const MapElement: FunctionComponent<Props> = ({
   );
 };
 
-function calculateTopAndLeft(position: MapPosition): {
+function calculateTopAndLeft(
+  { width, height }: { height: number; width: number },
+  position: MapPosition
+): {
   top: number;
   left: number;
 } {
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
+  const centerX = width / 2;
+  const centerY = height / 2;
 
-  const coordinates = getMapPositionAsCoords(position);
+  const coordinates = getMapPositionAsCoords({ height, width }, position);
 
   return { top: centerY - coordinates.y, left: centerX + coordinates.x };
 }
 
-function getMapPositionAsCoords(position: MapPosition): RawMapPosition {
+function getMapPositionAsCoords(
+  { width, height }: { height: number; width: number },
+  position: MapPosition
+): RawMapPosition {
   if (typeof position === "function") {
     return position({
-      width: window.innerWidth / 2,
-      height: window.innerHeight / 2,
+      width: width / 2,
+      height: height / 2,
     });
   }
 
