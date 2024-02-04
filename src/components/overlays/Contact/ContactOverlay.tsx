@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import jtaLogo from "../../../assets/contact/jta-logo.svg";
-import { Overlay } from "../Overlay";
+import { GenericOverlayProps, Overlay } from "../Overlay";
 import "./ContactOverlay.scss";
 import { ContactService } from "./ContactService";
 
@@ -15,9 +15,11 @@ import mastodonLogo from "../../../assets/contact/services/mastodon.svg";
 import rymLogo from "../../../assets/contact/services/rateyourmusic.svg";
 import twitterLogo from "../../../assets/contact/services/twitter.svg";
 
-export const ContactOverlay: FunctionComponent = () => {
+export const ContactOverlay: FunctionComponent<GenericOverlayProps> = ({
+  onHeightChange,
+}) => {
   return (
-    <Overlay className="ContactOverlay">
+    <Overlay className="ContactOverlay" onHeightChange={onHeightChange}>
       <div className="header">
         <h1 className="title">Contact</h1>
         <img

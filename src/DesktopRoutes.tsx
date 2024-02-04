@@ -9,7 +9,7 @@ export function DesktopRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/design" element={<Design />} />
+      <Route path="/design/:path?" element={<Design />} />
       <Route path="/coding" element={<Coding />} />
       <Route path="/about-me" element={<AboutMe />} />
       <Route path="/contact" element={<Contact />} />

@@ -1,11 +1,14 @@
+import { format } from "fecha";
 import { FunctionComponent } from "react";
-import { Overlay } from "../Overlay";
+import { GenericOverlayProps, Overlay } from "../Overlay";
 import "./CodingOverlay.scss";
 import { CodingProject } from "./projects/CodingProject";
 
-export const CodingOverlay: FunctionComponent = () => {
+export const CodingOverlay: FunctionComponent<GenericOverlayProps> = ({
+  onHeightChange,
+}) => {
   return (
-    <Overlay className="CodingOverlay">
+    <Overlay className="CodingOverlay" onHeightChange={onHeightChange}>
       <div className="heading">
         <h3 className="title">
           Applications
@@ -13,7 +16,8 @@ export const CodingOverlay: FunctionComponent = () => {
           and Coding Projects
         </h3>
         <h5 className="subtitle">
-          October 18 2017 <span className="to">to</span> November 1 2023
+          October 18 2017 <span className="to">to</span>{" "}
+          {format(new Date(), "MMMM D YYYY")}
         </h5>
       </div>
 

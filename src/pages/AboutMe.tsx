@@ -13,47 +13,46 @@ import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
 import { AboutMeOverlay } from "../components/overlays/AboutMe/AboutMeOverlay";
 import { Lines } from "../map/lines";
+import { Page } from "./Page";
 
 export function AboutMe() {
-  return (
-    <div>
-      <Map>
-        {/* Lines */}
-        <Line src={cyanLine} name="cyan line" position={{ x: -2010, y: 250 }} />
+  const map = (
+    <Map>
+      {/* Lines */}
+      <Line src={cyanLine} name="cyan line" position={{ x: -2010, y: 250 }} />
 
-        <Line src={redLine} name="red line" position={{ x: -400, y: 1130 }} />
+      <Line src={redLine} name="red line" position={{ x: -400, y: 1130 }} />
 
-        {/* Stations */}
-        <Station
-          src={singleCyanLineStation}
-          name="home"
-          position={({ width: quadrantWidth }) => ({
-            x: equallySpace(MapDirection.Left, quadrantWidth, 2, -290),
-            y: 255,
-          })}
-        />
+      {/* Stations */}
+      <Station
+        src={singleCyanLineStation}
+        name="home"
+        position={({ width: quadrantWidth }) => ({
+          x: equallySpace(MapDirection.Left, quadrantWidth, 2, -290),
+          y: 255,
+        })}
+      />
 
-        <StationLabel
-          label="Home"
-          linkTo="/"
-          position={({ width: quadrantWidth }) => ({
-            x: equallySpace(MapDirection.Left, quadrantWidth, 2, -319),
-            y: 219,
-          })}
-          servedLines={[Lines.cyan]}
-        />
+      <StationLabel
+        label="Home"
+        linkTo="/"
+        position={({ width: quadrantWidth }) => ({
+          x: equallySpace(MapDirection.Left, quadrantWidth, 2, -319),
+          y: 219,
+        })}
+        servedLines={[Lines.cyan]}
+      />
 
-        {/* Map Elements */}
+      {/* Map Elements */}
 
-        <OtherMapFeature
-          src={fraserRiver}
-          type={MapFeatureType.Waterbody}
-          name="fraser river"
-          position={{ x: -100, y: 610 }}
-        />
-      </Map>
-
-      <AboutMeOverlay />
-    </div>
+      <OtherMapFeature
+        src={fraserRiver}
+        type={MapFeatureType.Waterbody}
+        name="fraser river"
+        position={{ x: -100, y: 610 }}
+      />
+    </Map>
   );
+
+  return <Page title="About Me" map={map} overlay={AboutMeOverlay} />;
 }

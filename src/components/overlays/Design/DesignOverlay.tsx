@@ -1,18 +1,25 @@
 import { FunctionComponent } from "react";
-import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1933.png";
-import futureVignelli from "../../../assets/design/projects/future-vignelli.png";
-import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
-import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
-import skyrem from "../../../assets/design/projects/skyrem.png";
-import ttcSkytrain from "../../../assets/design/projects/ttc-skytrain.png";
-import { Overlay } from "../Overlay";
+import { GenericOverlayProps, Overlay } from "../Overlay";
 import "./DesignOverlay.scss";
 import { LargeProject } from "./projects/LargeProject";
 import { SmallProject } from "./projects/SmallProject";
 
-export const DesignOverlay: FunctionComponent = () => {
+import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1933.png";
+import futureVignelliBig from "../../../assets/design/projects/future-vignelli-big.png";
+import futureVignelliThumbnail from "../../../assets/design/projects/future-vignelli-thumbnail.png";
+import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
+import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
+import skyremBig from "../../../assets/design/projects/skyrem-big.png";
+import skyremThumbnail from "../../../assets/design/projects/skyrem-thumbnail.png";
+import ttcSkytrainBig from "../../../assets/design/projects/ttc-skytrain-big.png";
+import ttcSkytrainThumbnail from "../../../assets/design/projects/ttc-skytrain-thumbnail.png";
+
+export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
+  onHeightChange,
+  page,
+}) => {
   return (
-    <Overlay className="DesignOverlay">
+    <Overlay className="DesignOverlay" onHeightChange={onHeightChange}>
       <div className="heading">
         <h3 className="title">
           Transit Maps
@@ -23,6 +30,7 @@ export const DesignOverlay: FunctionComponent = () => {
 
       <div className="projects">
         <LargeProject
+          page={page}
           title="Map of Calgary’s Light Railways"
           subtitle="In the style of Harry Beck’s 1933 Map"
           year={2023}
@@ -44,6 +52,7 @@ export const DesignOverlay: FunctionComponent = () => {
         />
 
         <SmallProject
+          page={page}
           align="left"
           title="SkyREM Map"
           subtitle="In the style of TransLink’s Fast & Frequent Transit Map"
@@ -56,20 +65,23 @@ export const DesignOverlay: FunctionComponent = () => {
               inspired map for it.
             </p>
           }
-          imgSrc={skyrem}
+          thumbnailImgSrc={skyremThumbnail}
+          imgSrc={skyremBig}
           imgAlt="montreal rem map"
         />
 
         <SmallProject
+          page={page}
           align="right"
           title="Metrotown Bus Loop Map"
           subtitle="In the style of TransLink’s “Where to catch your bus map”"
           year={2023}
           imgSrc={metrotownBusLoopMap}
-          imgAlt="montreal rem map"
+          imgAlt="metrotown bus loop map"
         />
 
         <LargeProject
+          page={page}
           title="Future Vancouver Vignelli"
           subtitle="In the style of Massimo Vignelli’s 1972 Map"
           year={2023}
@@ -87,11 +99,13 @@ export const DesignOverlay: FunctionComponent = () => {
               Vignelli maps.
             </p>
           }
-          imgSrc={futureVignelli}
+          thumbnailImgSrc={futureVignelliThumbnail}
+          imgSrc={futureVignelliBig}
           imgAlt="70s new york style skytrain map"
         />
 
         <LargeProject
+          page={page}
           title="Retro Bus Map of Downtown Vancouver"
           subtitle="In the style of the Vancouver “Rail car and bus routes as at 1953” map"
           year={2023}
@@ -108,6 +122,7 @@ export const DesignOverlay: FunctionComponent = () => {
         />
 
         <LargeProject
+          page={page}
           title="TTC Style SkyTrain Map"
           subtitle="In the style of TTC’s subway map"
           year={2022}
@@ -117,7 +132,8 @@ export const DesignOverlay: FunctionComponent = () => {
               what the SkyTrain map would look like if the TTC designed it.
             </p>
           }
-          imgSrc={ttcSkytrain}
+          thumbnailImgSrc={ttcSkytrainThumbnail}
+          imgSrc={ttcSkytrainBig}
           imgAlt="50s style bus map"
         />
       </div>

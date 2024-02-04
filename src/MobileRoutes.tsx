@@ -9,7 +9,7 @@ export function MobileRoutes() {
   return (
     <Routes>
       <Route path="/" element={<MobileHome />} />
-      <Route path="/design" element={<MobileDesign />} />
+      <Route path="/design/:path?" element={<MobileDesign />} />
       <Route path="/coding" element={<MobileCoding />} />
       <Route path="/about-me" element={<MobileAboutMe />} />
       <Route path="/contact" element={<MobileContact />} />

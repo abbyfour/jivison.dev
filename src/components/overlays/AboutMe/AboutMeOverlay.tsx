@@ -1,11 +1,16 @@
+import { format } from "fecha";
 import { FunctionComponent } from "react";
-import { Overlay } from "../Overlay";
+import { GenericOverlayProps, Overlay } from "../Overlay";
 import "./AboutMeOverlay.scss";
 
-export const AboutMeOverlay: FunctionComponent = () => {
+export const AboutMeOverlay: FunctionComponent<GenericOverlayProps> = ({
+  onHeightChange,
+}) => {
   return (
-    <Overlay className="AboutMeOverlay">
-      <small className="effectiveDate">Effective November 1st, 2023</small>
+    <Overlay className="AboutMeOverlay" onHeightChange={onHeightChange}>
+      <small className="effectiveDate">
+        Effective {format(new Date(), "MMMM Do, YYYY")}
+      </small>
 
       <div className="intro">
         <div className="heading main">

@@ -8,46 +8,45 @@ import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
 import { ContactOverlay } from "../components/overlays/Contact/ContactOverlay";
 import { Lines } from "../map/lines";
+import { Page } from "./Page";
 
 export function Contact() {
-  return (
-    <div>
-      <Map>
-        {/* Lines */}
-        <Line
-          src={orangeLine}
-          name="orange line"
-          position={({ width: quadrantWidth }) => ({
-            x: equallySpace(MapDirection.Left, quadrantWidth, 2, -412),
-            y: 730,
-          })}
-        />
+  const map = (
+    <Map>
+      {/* Lines */}
+      <Line
+        src={orangeLine}
+        name="orange line"
+        position={({ width: quadrantWidth }) => ({
+          x: equallySpace(MapDirection.Left, quadrantWidth, 2, -412),
+          y: 730,
+        })}
+      />
 
-        <Line src={cyanLine} name="cyan line" position={{ x: -1670, y: 580 }} />
+      <Line src={cyanLine} name="cyan line" position={{ x: -1670, y: 580 }} />
 
-        {/* Stations */}
-        <Station
-          src={interchangeStation}
-          name="home"
-          position={({ width: quadrantWidth }) => ({
-            x: equallySpace(MapDirection.Left, quadrantWidth, 2, -422),
-            y: 244,
-          })}
-        />
+      {/* Stations */}
+      <Station
+        src={interchangeStation}
+        name="home"
+        position={({ width: quadrantWidth }) => ({
+          x: equallySpace(MapDirection.Left, quadrantWidth, 2, -422),
+          y: 244,
+        })}
+      />
 
-        <StationLabel
-          interchange
-          label="Home"
-          linkTo="/"
-          position={({ width: quadrantWidth }) => ({
-            x: equallySpace(MapDirection.Left, quadrantWidth, 2, -354),
-            y: 269,
-          })}
-          servedLines={[Lines.orange, Lines.cyan]}
-        />
-      </Map>
-
-      <ContactOverlay />
-    </div>
+      <StationLabel
+        interchange
+        label="Home"
+        linkTo="/"
+        position={({ width: quadrantWidth }) => ({
+          x: equallySpace(MapDirection.Left, quadrantWidth, 2, -354),
+          y: 269,
+        })}
+        servedLines={[Lines.orange, Lines.cyan]}
+      />
+    </Map>
   );
+
+  return <Page title="Contact" map={map} overlay={ContactOverlay} />;
 }

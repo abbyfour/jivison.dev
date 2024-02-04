@@ -1,4 +1,6 @@
 import { FunctionComponent, ReactNode } from "react";
+import { PageRef } from "../../../../structures/PageRef";
+import { ImageView } from "../../../ImageView/ImageView";
 import "./projects.scss";
 
 export interface ProjectProps {
@@ -7,7 +9,9 @@ export interface ProjectProps {
   year: number;
   description?: ReactNode;
   imgSrc: string;
+  thumbnailImgSrc?: string;
   imgAlt: string;
+  page: PageRef | undefined;
 }
 
 export const Project: FunctionComponent<
@@ -18,8 +22,10 @@ export const Project: FunctionComponent<
   year,
   description,
   imgSrc,
+  thumbnailImgSrc,
   imgAlt,
   className,
+  page,
   ...rest
 }) => {
   return (
@@ -36,7 +42,15 @@ export const Project: FunctionComponent<
         <div className="description">{description}</div>
       </div>
 
-      <img className="previewImage" src={imgSrc} alt={imgAlt} />
+      <ImageView
+        className="previewImage"
+        description={description}
+        src={imgSrc}
+        thumnailSrc={thumbnailImgSrc}
+        alt={imgAlt}
+        page={page}
+        originPath="/design"
+      />
     </div>
   );
 };

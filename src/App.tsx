@@ -34,7 +34,7 @@ function App() {
   const isMobile = window.innerWidth <= 760;
 
   return (
-    <div className={isMobile ? "mobile" : ""}>
+    <div className={isMobile ? "mobile" : undefined}>
       <BrowserRouter>
         {!isMobile && <DesktopRoutes />}
         {isMobile && <MobileRoutes />}

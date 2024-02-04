@@ -3,11 +3,13 @@ import trainOrange from "../../assets/home/train-orange.svg";
 import trainRed from "../../assets/home/train-red.svg";
 import trainYellow from "../../assets/home/train-yellow.svg";
 import "./HomeOverlay.scss";
-import { Overlay } from "./Overlay";
+import { GenericOverlayProps, Overlay } from "./Overlay";
 
-export const HomeOverlay: FunctionComponent = () => {
+export const HomeOverlay: FunctionComponent<GenericOverlayProps> = ({
+  onHeightChange,
+}) => {
   return (
-    <Overlay className="HomeOverlay">
+    <Overlay className="HomeOverlay" onHeightChange={onHeightChange}>
       <div className="heading">
         <h2>John Ivison</h2>
       </div>
