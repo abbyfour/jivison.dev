@@ -46,6 +46,11 @@
       column-gap: 0.6rem;
       width: 100%;
 
+      img {
+        width: 32px;
+        height: 32px;
+      }
+
       .serviceName {
         font-weight: 700;
         font-size: 16px;
