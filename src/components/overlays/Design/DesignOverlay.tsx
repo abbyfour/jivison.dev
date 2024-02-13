@@ -9,6 +9,7 @@ import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1
 import futureVignelliBig from "../../../assets/design/projects/future-vignelli-big.png";
 import futureVignelliThumbnail from "../../../assets/design/projects/future-vignelli-thumbnail.png";
 import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
+import movementPosters from "../../../assets/design/projects/movement-posters.png";
 import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
 import skyremBig from "../../../assets/design/projects/skyrem-big.png";
 import skyremThumbnail from "../../../assets/design/projects/skyrem-thumbnail.png";
@@ -51,6 +52,24 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
           }
           imgSrc={calgarysLightRailways}
           imgAlt="retro style calgary LRT map"
+        />
+
+        <LargeProject
+          slug={"movement-posters"}
+          page={page}
+          title="Movement First Meeting Posters"
+          subtitle="“We can fix the 49. Join the Movement.”"
+          year={2023}
+          description={
+            <p>
+              I created these posters to advertise Movement's first meeting!
+              They contain statistics gathered from a survey we had put up
+              earlier. The posters are intended to imitate the simple black and
+              white style of the posters advertising the survey.
+            </p>
+          }
+          imgSrc={movementPosters}
+          imgAlt="black and white posters"
         />
 
         <SmallProject

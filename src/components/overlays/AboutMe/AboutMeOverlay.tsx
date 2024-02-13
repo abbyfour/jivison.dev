@@ -38,14 +38,22 @@ export const AboutMeOverlay: FunctionComponent<GenericOverlayProps> = ({
         </div>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          porta imperdiet purus mollis placerat. Fusce volutpat sapien in justo
-          euismod semper. Maecenas tempor pellentesque diam vitae rhoncus.
-          Phasellus imperdiet erat et velit hendrerit, vel fermentum turpis
-          ullamcorper. Donec ut nunc sed enim iaculis sagittis. Suspendisse
-          accumsan arcu arcu, quis tempor dui hendrerit id. In placerat
-          elementum dolor, ac dictum enim ultricies ac. Donec eget massa dolor.
-          Nunc ornare pharetra pulvinar.
+          I love to work on software from all angles, from programming, to dev
+          ops, to design, to testing. However my real passion lies in developing
+          software, both back-end and front-end. I started learning to code in
+          high school, where I was able to hone my skills and practice in an
+          engineering program. Being the only one who really knew how to code in
+          the class, I was often left to figure things out for myself. Because
+          of this, through high school I was able to develop my skills even
+          further in my own time working on personal projects.
+          <br />
+          After high school, I attended a 3 month developer bootcamp, where I
+          was able to formally learn and practice a lot of the skills I learned
+          in high school. After this bootcamp, I got my first job as a junior
+          developer, which let me greatly expand my skills and learn from my
+          talented coworkers. While working there, I also started working on a
+          personal project in my spare time, Gowon. 4 years later, it now has
+          over 10,000 users and a dedicated online community.
         </p>
       </div>
 
