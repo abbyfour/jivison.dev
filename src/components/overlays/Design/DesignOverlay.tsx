@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import jivisondevLogo from "../../../assets/shared/jivison.dev-translink-logo.png";
 import { GenericOverlayProps, Overlay } from "../Overlay";
 import "./DesignOverlay.scss";
 import { LargeProject } from "./projects/LargeProject";
@@ -142,6 +143,21 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
           imgSrc={ttcSkytrainBig}
           imgAlt="50s style bus map"
         />
+      </div>
+
+      <div className="footer">
+        <div className="left">
+          <p className="yellow">You've reached the bottom of the page.</p>
+          <p
+            className="scroll"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Scroll <span className="to-top">to top?</span>
+          </p>
+        </div>
+        <div className="right">
+          <img src={jivisondevLogo} alt="jivison.dev logo" />
+        </div>
       </div>
     </Overlay>
   );

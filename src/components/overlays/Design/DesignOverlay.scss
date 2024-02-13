@@ -9,12 +9,15 @@
   padding-bottom: 3em;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
 
-  > .heading {
+  > .heading,
+  .footer {
     border-radius: 1px;
     background: #00345f;
     color: white;
     padding: 1.5em;
+  }
 
+  > .heading {
     .title {
       font-weight: bold;
     }
@@ -23,6 +26,34 @@
       font-style: italic;
       margin-top: 0.5em;
       color: #fed20a;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left p {
+      font-weight: 400;
+      font-size: 0.8em;
+    }
+
+    .right img {
+      width: 50px;
+    }
+
+    .yellow {
+      color: #fed20a;
+      margin-bottom: 5px;
+    }
+
+    .scroll:hover {
+      cursor: pointer;
+
+      .to-top {
+        font-weight: bold;
+      }
     }
   }
 }
@@ -34,5 +65,14 @@
     width: 90%;
     min-width: 0px;
     padding: 1em;
+
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .right {
+        margin-top: 10px;
+      }
+    }
   }
 }

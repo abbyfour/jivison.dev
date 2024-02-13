@@ -55,7 +55,7 @@ export function MobileHome() {
         label="Design Projects"
         linkTo="/design"
         position={({ height: quadrantHeight }) => ({
-          x: -18,
+          x: -22,
           y: quadrantHeight - 501,
         })}
         align="right"
@@ -78,7 +78,7 @@ export function MobileHome() {
         label="About Me"
         linkTo="/about-me"
         position={({ height: quadrantHeight }) => ({
-          x: -56,
+          x: -52,
           y: quadrantHeight - 373,
         })}
         align="right"
