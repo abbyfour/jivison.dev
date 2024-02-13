@@ -1,7 +1,7 @@
 import { Map } from "../../components/map/Map";
 import { Line } from "../../components/map/transit/Line";
-import { Station } from "../../components/map/transit/Station";
 import { StationLabel } from "../../components/map/transit/StationLabel";
+import { StationMarker } from "../../components/map/transit/StationMarker";
 import { DesignOverlay } from "../../components/overlays/Design/DesignOverlay";
 import { Lines } from "../../map/lines";
 import { Page } from "../Page";
@@ -23,7 +23,7 @@ export function MobileDesign() {
       />
 
       {/* Home */}
-      <Station
+      <StationMarker
         src={orangeLineStop}
         name="home station"
         position={({ width: quadrantWidth, height: quadrantHeight }) => ({
@@ -36,8 +36,8 @@ export function MobileDesign() {
         label="Home"
         linkTo="/"
         position={({ width: quadrantWidth, height: quadrantHeight }) => ({
-          x: -quadrantWidth + 55,
-          y: quadrantHeight - 51,
+          x: -quadrantWidth + 59,
+          y: quadrantHeight - 55,
         })}
         align="center"
         servedLines={[Lines.orange]}

@@ -4,8 +4,8 @@ import {
   OtherMapFeature,
 } from "../../components/map/OtherMapFeature";
 import { Line } from "../../components/map/transit/Line";
-import { Station } from "../../components/map/transit/Station";
 import { StationLabel } from "../../components/map/transit/StationLabel";
+import { StationMarker } from "../../components/map/transit/StationMarker";
 import { HomeOverlay } from "../../components/overlays/HomeOverlay";
 import { Lines } from "../../map/lines";
 import { Page } from "../Page";
@@ -40,7 +40,7 @@ export function MobileHome() {
       />
 
       {/* Design */}
-      <Station
+      <StationMarker
         src={dualLineStop}
         name="design station"
         position={({ height: quadrantHeight }) => ({
@@ -55,7 +55,7 @@ export function MobileHome() {
         label="Design Projects"
         linkTo="/design"
         position={({ height: quadrantHeight }) => ({
-          x: -22,
+          x: -18,
           y: quadrantHeight - 501,
         })}
         align="right"
@@ -63,7 +63,7 @@ export function MobileHome() {
       />
 
       {/* About */}
-      <Station
+      <StationMarker
         src={dualLineStop}
         name="about me station"
         position={({ height: quadrantHeight }) => ({
@@ -78,7 +78,7 @@ export function MobileHome() {
         label="About Me"
         linkTo="/about-me"
         position={({ height: quadrantHeight }) => ({
-          x: -51,
+          x: -56,
           y: quadrantHeight - 373,
         })}
         align="right"
@@ -86,7 +86,7 @@ export function MobileHome() {
       />
 
       {/* Contact */}
-      <Station
+      <StationMarker
         src={redLineStop}
         name="contact station"
         position={({ height: quadrantHeight }) => ({
@@ -107,7 +107,7 @@ export function MobileHome() {
       />
 
       {/* Blog */}
-      <Station
+      <StationMarker
         src={redLineStop}
         name="blog station"
         position={({ height: quadrantHeight }) => ({
@@ -128,7 +128,7 @@ export function MobileHome() {
       />
 
       {/* Coding */}
-      <Station
+      <StationMarker
         src={orangeLineStop}
         name="coding station"
         position={({ height: quadrantHeight }) => ({

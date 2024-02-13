@@ -10,7 +10,7 @@ type Props = PropsWithChildren<
   } & MapElementProps
 >;
 
-export const Station: FunctionComponent<Props> = ({
+export const StationMarker: FunctionComponent<Props> = ({
   children,
   src,
   name,
@@ -18,12 +18,13 @@ export const Station: FunctionComponent<Props> = ({
   ...rest
 }) => {
   return (
-    <MapElement className="Station" layer={Layer.Stations} {...rest}>
+    <MapElement className="StationMarker" layer={Layer.Stations} {...rest}>
       <img
         style={{ transform: `rotate(${orientation}deg)` }}
         src={src}
         alt={name}
         className="Station-img"
+        {...{ fetchpriority: "high" }}
       />
 
       {children}

@@ -27,7 +27,12 @@ export const OtherMapFeature: FunctionComponent<Props> = ({
       {...rest}
       layer={type === MapFeatureType.Waterbody ? Layer.Waterbodies : undefined}
     >
-      <img src={src} alt={name} className={`${type}-img`} />
+      <img
+        src={src}
+        alt={name}
+        className={`${type}-img`}
+        {...{ fetchpriority: "high" }}
+      />
 
       {children}
     </MapElement>

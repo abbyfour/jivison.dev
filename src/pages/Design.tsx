@@ -7,8 +7,8 @@ import {
   OtherMapFeature,
 } from "../components/map/OtherMapFeature";
 import { Line } from "../components/map/transit/Line";
-import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { StationMarker } from "../components/map/transit/StationMarker";
 import { DesignOverlay } from "../components/overlays/Design/DesignOverlay";
 import { Lines } from "../map/lines";
 import { Page } from "./Page";
@@ -27,7 +27,7 @@ export function Design() {
       />
 
       {/* Stations */}
-      <Station
+      <StationMarker
         src={singleOrangeLineStation}
         name="home"
         position={({ width: quadrantWidth, height: quadrantHeight }) => ({

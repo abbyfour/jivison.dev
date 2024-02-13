@@ -11,8 +11,8 @@ import {
   OtherMapFeature,
 } from "../components/map/OtherMapFeature";
 import { Line } from "../components/map/transit/Line";
-import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { StationMarker } from "../components/map/transit/StationMarker";
 import { HomeOverlay } from "../components/overlays/HomeOverlay";
 import { Lines } from "../map/lines";
 import { Page } from "./Page";
@@ -29,17 +29,17 @@ export function Home() {
       />
 
       {/* Contact */}
-      <Station
+
+      <StationMarker
         src={doubleInterchangeStation}
         name="contact station"
         position={{ x: -14, y: -105 }}
         orientation={-45}
       />
-
       <StationLabel
+        linkTo="/contact"
         interchange
         label="Contact"
-        linkTo="/contact"
         position={{ x: -124, y: -115 }}
         align="right"
         servedLines={[Lines.red, Lines.orange, Lines.yellow]}
@@ -47,24 +47,25 @@ export function Home() {
 
       {/* About Me */}
 
-      <Station
+      <StationLabel
+        linkTo="/about-me"
+        interchange
+        label="About Me"
+        position={{ x: 98, y: 135 }}
+        align="right"
+        servedLines={[Lines.orange, Lines.yellow]}
+      />
+
+      <StationMarker
         src={doubleInterchangeStation}
         name="about me station"
         position={{ x: 215, y: 125 }}
         orientation={-45}
       />
 
-      <StationLabel
-        interchange
-        label="About Me"
-        linkTo="/about-me"
-        position={{ x: 98, y: 135 }}
-        align="right"
-        servedLines={[Lines.orange, Lines.yellow]}
-      />
-
       {/* Blog */}
-      <Station
+
+      <StationMarker
         src={singleYellowLineStation}
         name="blog station"
         position={({ width: quadrantWidth }) => ({
@@ -74,8 +75,8 @@ export function Home() {
       />
 
       <StationLabel
-        label="Blog"
         linkTo="https://blog.jivison.dev"
+        label="Blog"
         position={({ width: quadrantWidth }) => ({
           x: equallySpace(MapDirection.Left, quadrantWidth, 2, -204),
           y: -210,
@@ -85,7 +86,7 @@ export function Home() {
       />
 
       {/* Coding Projects */}
-      <Station
+      <StationMarker
         src={singleOrangeLineStation}
         name="coding projects station"
         position={({ height: quadrantHeight }) => ({
@@ -95,8 +96,8 @@ export function Home() {
       />
 
       <StationLabel
-        label="Coding Projects"
         linkTo="/coding"
+        label="Coding Projects"
         position={({ height: quadrantHeight }) => ({
           x: -253,
           y: equallySpace(MapDirection.Down, quadrantHeight, 2, -266),
@@ -106,24 +107,24 @@ export function Home() {
       />
 
       {/* Transit Maps & Design Projects */}
-      <Station
-        src={singleYellowLineStation}
-        name="transit maps & design projects station"
-        position={() => ({
-          x: 451,
-          y: 359,
-        })}
-      />
-
       <StationLabel
-        label={["Transit Maps &", "Design Projects"]}
         linkTo="/design"
+        label={["Transit Maps &", "Design Projects"]}
         position={() => ({
           x: 291,
           y: 399,
         })}
         align="right"
         servedLines={[Lines.yellow]}
+      />
+
+      <StationMarker
+        src={singleYellowLineStation}
+        name="transit maps & design projects station"
+        position={() => ({
+          x: 451,
+          y: 359,
+        })}
       />
 
       {/* Map Elements */}

@@ -3,8 +3,8 @@ import singleYellowLineStation from "../assets/shared/stop-yellow.svg";
 import { Map } from "../components/map/Map";
 import { MapDirection, equallySpace } from "../components/map/MapElement";
 import { Line } from "../components/map/transit/Line";
-import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { StationMarker } from "../components/map/transit/StationMarker";
 import { CodingOverlay } from "../components/overlays/Coding/CodingOverlay";
 import { Lines } from "../map/lines";
 import { Page } from "./Page";
@@ -20,7 +20,7 @@ export function Coding() {
       />
 
       {/* Stations */}
-      <Station
+      <StationMarker
         src={singleYellowLineStation}
         name="home"
         position={({ width: quadrantWidth }) => ({

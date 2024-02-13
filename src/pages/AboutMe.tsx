@@ -9,8 +9,8 @@ import {
   OtherMapFeature,
 } from "../components/map/OtherMapFeature";
 import { Line } from "../components/map/transit/Line";
-import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { StationMarker } from "../components/map/transit/StationMarker";
 import { AboutMeOverlay } from "../components/overlays/AboutMe/AboutMeOverlay";
 import { Lines } from "../map/lines";
 import { Page } from "./Page";
@@ -24,7 +24,7 @@ export function AboutMe() {
       <Line src={redLine} name="red line" position={{ x: -400, y: 1130 }} />
 
       {/* Stations */}
-      <Station
+      <StationMarker
         src={singleCyanLineStation}
         name="home"
         position={({ width: quadrantWidth }) => ({

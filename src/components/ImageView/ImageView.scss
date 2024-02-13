@@ -1,10 +1,10 @@
 .ImageView {
-  &:hover {
-    cursor: pointer;
-  }
-
   & > img {
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .fullscreenImage {
@@ -41,6 +41,10 @@
       object-fit: contain;
       width: 90%;
       height: 80vh;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .image-description {

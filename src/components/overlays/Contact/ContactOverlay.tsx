@@ -52,7 +52,7 @@ export const ContactOverlay: FunctionComponent<GenericOverlayProps> = ({
                 handle="jogn"
                 url="https://www.behance.net/jogn"
               />
-              &nbsp;to LinkedIn.
+              &nbsp;to Behance.
               <br />
               For all other professional inquiries, follow&nbsp;
               <ContactService
@@ -62,7 +62,7 @@ export const ContactOverlay: FunctionComponent<GenericOverlayProps> = ({
                 handle="john-ivison"
                 url="https://www.linkedin.com/in/john-ivison/"
               />
-              &nbsp;to Behance.
+              &nbsp;to Linkedin.
             </p>
           </div>
         </div>

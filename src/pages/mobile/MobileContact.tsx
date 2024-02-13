@@ -1,7 +1,7 @@
 import { Map } from "../../components/map/Map";
 import { Line } from "../../components/map/transit/Line";
-import { Station } from "../../components/map/transit/Station";
 import { StationLabel } from "../../components/map/transit/StationLabel";
+import { StationMarker } from "../../components/map/transit/StationMarker";
 import { Lines } from "../../map/lines";
 import { Page } from "../Page";
 
@@ -33,7 +33,7 @@ export function MobileContact() {
       />
 
       {/* Home */}
-      <Station
+      <StationMarker
         src={interchangeStop}
         name="home station"
         position={({ height: quadrantHeight }) => ({

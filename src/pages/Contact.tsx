@@ -4,8 +4,8 @@ import interchangeStation from "../assets/shared/stop-interchange.svg";
 import { Map } from "../components/map/Map";
 import { MapDirection, equallySpace } from "../components/map/MapElement";
 import { Line } from "../components/map/transit/Line";
-import { Station } from "../components/map/transit/Station";
 import { StationLabel } from "../components/map/transit/StationLabel";
+import { StationMarker } from "../components/map/transit/StationMarker";
 import { ContactOverlay } from "../components/overlays/Contact/ContactOverlay";
 import { Lines } from "../map/lines";
 import { Page } from "./Page";
@@ -26,7 +26,7 @@ export function Contact() {
       <Line src={cyanLine} name="cyan line" position={{ x: -1670, y: 580 }} />
 
       {/* Stations */}
-      <Station
+      <StationMarker
         src={interchangeStation}
         name="home"
         position={({ width: quadrantWidth }) => ({

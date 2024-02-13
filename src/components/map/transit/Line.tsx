@@ -17,7 +17,12 @@ export const Line: FunctionComponent<Props> = ({
 }) => {
   return (
     <MapElement className="Line" {...rest} layer={Layer.Lines}>
-      <img src={src} alt={name} className="Line-img" />
+      <img
+        src={src}
+        alt={name}
+        className="Line-img"
+        {...{ fetchpriority: "high" }}
+      />
 
       {children}
     </MapElement>

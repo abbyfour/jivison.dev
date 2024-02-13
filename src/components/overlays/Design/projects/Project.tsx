@@ -4,6 +4,7 @@ import { ImageView } from "../../../ImageView/ImageView";
 import "./projects.scss";
 
 export interface ProjectProps {
+  slug: string;
   title: string;
   subtitle: string;
   year: number;
@@ -17,6 +18,7 @@ export interface ProjectProps {
 export const Project: FunctionComponent<
   ProjectProps & React.HTMLAttributes<HTMLDivElement>
 > = ({
+  slug,
   title,
   subtitle,
   year,
@@ -29,7 +31,7 @@ export const Project: FunctionComponent<
   ...rest
 }) => {
   return (
-    <div className={`Project ${className}`} {...rest}>
+    <div className={`Project ${className}`} id={slug} {...rest}>
       <div className="projectContent">
         <div className="heading">
           <h4 className="title">{title}</h4>

@@ -30,6 +30,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
 
       <div className="projects">
         <LargeProject
+          slug={"calgary-lrt"}
           page={page}
           title="Map of Calgary’s Light Railways"
           subtitle="In the style of Harry Beck’s 1933 Map"
@@ -52,6 +53,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
         />
 
         <SmallProject
+          slug={"skyrem"}
           page={page}
           align="left"
           title="SkyREM Map"
@@ -71,8 +73,9 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
         />
 
         <SmallProject
+          slug={"metrotown-bus-loop"}
           page={page}
-          align="right"
+          align="center"
           title="Metrotown Bus Loop Map"
           subtitle="In the style of TransLink’s “Where to catch your bus map”"
           year={2023}
@@ -81,6 +84,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
         />
 
         <LargeProject
+          slug={"future-vancouver-vignelli"}
           page={page}
           title="Future Vancouver Vignelli"
           subtitle="In the style of Massimo Vignelli’s 1972 Map"
@@ -105,6 +109,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
         />
 
         <LargeProject
+          slug={"retro-downtown-bus-map"}
           page={page}
           title="Retro Bus Map of Downtown Vancouver"
           subtitle="In the style of the Vancouver “Rail car and bus routes as at 1953” map"
@@ -122,6 +127,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
         />
 
         <LargeProject
+          slug={"ttc-style-skytrain"}
           page={page}
           title="TTC Style SkyTrain Map"
           subtitle="In the style of TTC’s subway map"

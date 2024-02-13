@@ -80,10 +80,12 @@ export const ImageView: FunctionComponent<ImageViewProps> = ({
   return (
     <div className="ImageView" {...rest}>
       <img
+        className="main-img"
         loading="lazy"
         onClick={enterFullscreen}
         src={thumnailSrc || src}
         alt={alt}
+        {...{ fetchpriority: "low" }}
       />
 
       {isFullscreen ? (

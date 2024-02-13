@@ -1,7 +1,7 @@
 import { Map } from "../../components/map/Map";
 import { Line } from "../../components/map/transit/Line";
-import { Station } from "../../components/map/transit/Station";
 import { StationLabel } from "../../components/map/transit/StationLabel";
+import { StationMarker } from "../../components/map/transit/StationMarker";
 import { CodingOverlay } from "../../components/overlays/Coding/CodingOverlay";
 import { Lines } from "../../map/lines";
 import { Page } from "../Page";
@@ -23,7 +23,7 @@ export function MobileCoding() {
       />
 
       {/* Home */}
-      <Station
+      <StationMarker
         src={yellowLineStop}
         name="home station"
         position={({ height: quadrantHeight }) => ({

@@ -4,8 +4,8 @@ import {
   OtherMapFeature,
 } from "../../components/map/OtherMapFeature";
 import { Line } from "../../components/map/transit/Line";
-import { Station } from "../../components/map/transit/Station";
 import { StationLabel } from "../../components/map/transit/StationLabel";
+import { StationMarker } from "../../components/map/transit/StationMarker";
 import { AboutMeOverlay } from "../../components/overlays/AboutMe/AboutMeOverlay";
 import { Lines } from "../../map/lines";
 import { Page } from "../Page";
@@ -28,7 +28,7 @@ export function MobileAboutMe() {
       />
 
       {/* Home */}
-      <Station
+      <StationMarker
         src={cyanLineStop}
         name="home station"
         position={({ height: quadrantHeight }) => ({

@@ -1,5 +1,8 @@
 .MapElement {
   z-index: -1;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .mobile {
@@ -9,5 +12,14 @@
     &.Station {
       transform: scale(0.7);
     }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
