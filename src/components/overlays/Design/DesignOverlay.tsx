@@ -5,10 +5,15 @@ import "./DesignOverlay.scss";
 import { LargeProject } from "./projects/LargeProject";
 import { SmallProject } from "./projects/SmallProject";
 
+import aBetterBurrardPeninsulaSample from "../../../assets/design/projects/a-better-burrard-peninsula-sample.png";
 import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1933.png";
+import ferriesOfTheNorthPacificCoastBig from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-big.png";
+import ferriesOfTheNorthPacificCoastThumbnail from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-thumbnail.png";
 import futureVignelliBig from "../../../assets/design/projects/future-vignelli-big.png";
 import futureVignelliThumbnail from "../../../assets/design/projects/future-vignelli-thumbnail.png";
 import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
+import movementModernThumbnail from "../../../assets/design/projects/movement-modern-thumbnail.png";
+import movementModernBig from "../../../assets/design/projects/movement-modern.png";
 import movementPosters from "../../../assets/design/projects/movement-posters.png";
 import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
 import skyremBig from "../../../assets/design/projects/skyrem-big.png";
@@ -31,6 +36,67 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
       </div>
 
       <div className="projects">
+        <LargeProject
+          slug={"ferries-of-the-north-pacific-coast"}
+          page={page}
+          title="Ferries of the North Pacific Coast"
+          subtitle="A tribute to the ferries of the Salish Sea and beyond"
+          year={2024}
+          description={
+            <p>
+              I spend a lot of time of the ferries of BC, so as a tribute to the
+              wonderful machines that get me around I made a map of the ferries
+              up the pacific coast.
+            </p>
+          }
+          imgSrc={ferriesOfTheNorthPacificCoastBig}
+          thumbnailImgSrc={ferriesOfTheNorthPacificCoastThumbnail}
+          imgAlt="document cover and pages"
+        />
+
+        <SmallProject
+          slug={"movement-modern"}
+          page={page}
+          align="center"
+          title="Movement Modern"
+          subtitle="Inspired by the Canada Modern design aesthetic"
+          year={2024}
+          description={
+            <p>
+              After a friend posted some of the content from{" "}
+              <a href="https://canadamodern.org/">canadamodern.org</a>, I was
+              inspired to try my hand at making some posters in the style. I
+              made these three posters for Movement.
+            </p>
+          }
+          thumbnailImgSrc={movementModernThumbnail}
+          imgSrc={movementModernBig}
+          imgAlt="montreal rem map"
+        />
+
+        <LargeProject
+          slug={"a-better-burrard-peninsula"}
+          page={page}
+          title="A Better Burrard Peninsula"
+          subtitle="Movement’s vision for transit in Vancouver, Burnaby and New Westminster"
+          year={2024}
+          description={
+            <p>
+              Movement was approached to give our suggestions on the (then)
+              upcoming Burrard Peninsula Area Transport Plan. I worked with Mike
+              Feaver and other Movement members and went all out on creating our
+              plan. I designed and compiled the entire document, inspired by the{" "}
+              <a href="https://metrovancouver.org/about-us/Documents/livable-region-strategic-plan.pdf">
+                1996 Metro Vancouver Livable Region Plan
+              </a>
+              . You can read it at{" "}
+              <a href="https://movementyvr.ca/bptatp">movementyvr.ca/bpatp</a>.
+            </p>
+          }
+          imgSrc={aBetterBurrardPeninsulaSample}
+          imgAlt="document cover and pages"
+        />
+
         <LargeProject
           slug={"calgary-lrt"}
           page={page}
