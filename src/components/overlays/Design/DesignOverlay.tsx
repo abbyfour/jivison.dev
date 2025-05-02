@@ -1,20 +1,26 @@
 import { FunctionComponent } from "react";
 import jivisondevLogo from "../../../assets/shared/jivison.dev-translink-logo.png";
 import { GenericOverlayProps, Overlay } from "../Overlay";
-import "./DesignOverlay.scss";
 import { LargeProject } from "./projects/LargeProject";
 import { SmallProject } from "./projects/SmallProject";
 
+import "./DesignOverlay.scss";
+
 import aBetterBurrardPeninsulaSample from "../../../assets/design/projects/a-better-burrard-peninsula-sample.png";
+import bcIntercityTransitVisionBig from "../../../assets/design/projects/bc-intercity-transit-vision-big.png";
+import bcIntercityTransitVisionThumbnail from "../../../assets/design/projects/bc-intercity-transit-vision-thumbnail.png";
+import bpatpEngagementResponse from "../../../assets/design/projects/bpatp-engagement-response.png";
 import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1933.png";
 import ferriesOfTheNorthPacificCoastBig from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-big.png";
 import ferriesOfTheNorthPacificCoastThumbnail from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-thumbnail.png";
 import futureVignelliBig from "../../../assets/design/projects/future-vignelli-big.png";
 import futureVignelliThumbnail from "../../../assets/design/projects/future-vignelli-thumbnail.png";
+import kgbSafetyImprovements from "../../../assets/design/projects/kgb-safety-improvements.png";
 import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
 import movementModernThumbnail from "../../../assets/design/projects/movement-modern-thumbnail.png";
 import movementModernBig from "../../../assets/design/projects/movement-modern.png";
 import movementPosters from "../../../assets/design/projects/movement-posters.png";
+import movementThankYouCards from "../../../assets/design/projects/movement-thank-you-cards.png";
 import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
 import skyremBig from "../../../assets/design/projects/skyrem-big.png";
 import skyremThumbnail from "../../../assets/design/projects/skyrem-thumbnail.png";
@@ -36,6 +42,66 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
       </div>
 
       <div className="projects">
+        <SmallProject
+          slug={"bpatp-phase-2-engagement-response"}
+          page={page}
+          title="BPATP Phase 2 Engagement Response"
+          subtitle="Another round!"
+          year={2025}
+          align={"left"}
+          description={
+            <p>
+              I compiled comments from Movement members and created this report
+              in response to TransLink's Burrard Peninsula Area Transport Plan
+              phase 2 engagement. Thank you to Michael and Gavin for providing
+              the beautiful photos used in this report.
+            </p>
+          }
+          imgSrc={bpatpEngagementResponse}
+          thumbnailImgSrc={bpatpEngagementResponse}
+          imgAlt="four pages of a report"
+        />
+
+        <SmallProject
+          slug={"king-george-boulevard-safety-improvements"}
+          page={page}
+          title="King George Boulevard Improvements Report"
+          subtitle="Imagining a new King George Boulevard"
+          year={2025}
+          align={"right"}
+          description={
+            <p>
+              Created for my GEOG 324 Geography of Transportation class, we
+              outlined our suggestions for improving safety for all road users
+              on King George Boulevard. I designed this report, which we
+              presented to planners from the City of Surrey.
+            </p>
+          }
+          imgSrc={kgbSafetyImprovements}
+          thumbnailImgSrc={kgbSafetyImprovements}
+          imgAlt="four pages of a report"
+        />
+
+        <SmallProject
+          slug={"movement-thank-you-cards"}
+          page={page}
+          title="Movement Thank You Cards"
+          subtitle="For all the Movementarians who worked hard to save the bus"
+          year={"2024, 2025"}
+          align={"left"}
+          description={
+            <p>
+              The top two cards were made for the 2025 Save the Bus campaign,
+              dedicated to the many volunteers that helped us stop transit cuts
+              and fund additional service expansion. The bottom card was made
+              for non-Movementarians who help our cause.
+            </p>
+          }
+          imgSrc={movementThankYouCards}
+          thumbnailImgSrc={movementThankYouCards}
+          imgAlt="three thank you cards"
+        />
+
         <LargeProject
           slug={"ferries-of-the-north-pacific-coast"}
           page={page}
@@ -44,7 +110,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
           year={2024}
           description={
             <p>
-              I spend a lot of time of the ferries of BC, so as a tribute to the
+              I spent a lot of time of the ferries of BC, so as a tribute to the
               wonderful machines that get me around I made a map of the ferries
               up the pacific coast.
             </p>
@@ -72,6 +138,28 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
           thumbnailImgSrc={movementModernThumbnail}
           imgSrc={movementModernBig}
           imgAlt="montreal rem map"
+        />
+
+        <LargeProject
+          slug={"bc-intercity-transit-vision"}
+          page={page}
+          title="BC Intercity Transit Vision"
+          subtitle="Buses are underrated..."
+          year={2024}
+          description={
+            <p>
+              BC has a loose patchwork of intercity transit, I created a vision
+              for how buses and ferries could work together to enable public
+              intercity transit across BC. You can read more about this map{" "}
+              <a href="https://blog.jivison.dev/a-new-vision-for-intercity-transit-in-bc/">
+                on my blog
+              </a>
+              .
+            </p>
+          }
+          imgSrc={bcIntercityTransitVisionBig}
+          thumbnailImgSrc={bcIntercityTransitVisionThumbnail}
+          imgAlt="document cover and pages"
         />
 
         <LargeProject

@@ -3,6 +3,8 @@
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .mobile {

@@ -49,15 +49,15 @@
 
     .image-description {
       color: white;
-
-      a {
-        color: #95caf6 !important;
-      }
-
       font-style: italic;
       width: 50%;
       padding: 1em;
       line-height: initial;
+      text-align: left;
+
+      a {
+        color: #95caf6 !important;
+      }
 
       p {
         font-size: 1.2rem;

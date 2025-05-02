@@ -20,9 +20,9 @@ export const HomeOverlay: FunctionComponent<GenericOverlayProps> = ({
         </div>
 
         <p className="description">
-          SFU Software Systems student.
+          SFU Resource and Environmental Management student.
           <br /> Templeton STEM alum.
-          <br /> Proudly based in Vancouver, BC.
+          <br /> Proudly based in East Vancouver, BC.
         </p>
 
         <div className="services">

@@ -19,9 +19,10 @@ export const AboutMeOverlay: FunctionComponent<GenericOverlayProps> = ({
 
         <p>
           My name is John Ivison, and I'm currently working my way through a
-          Software Systems degree at SFU! I started learning to code in 2017,
-          and I've never looked back since then. Through a combination of
-          different schools and self-learning, I'm now a full-stack developer.
+          Resource and Environmental Management degree at SFU! I started
+          learning to code in 2017, and I've never looked back since then.
+          Through a combination of different schools and self-learning, I'm now
+          a full-stack developer.
           <br />
           <br />
           During my experience as a front-end developer, I discovered that I was

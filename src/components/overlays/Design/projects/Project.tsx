@@ -7,7 +7,7 @@ export interface ProjectProps {
   slug: string;
   title: string;
   subtitle: string;
-  year: number;
+  year: number | string;
   description?: ReactNode;
   imgSrc: string;
   thumbnailImgSrc?: string;
