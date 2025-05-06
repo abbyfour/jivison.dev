@@ -1,4 +1,5 @@
 import { FunctionComponent, ReactNode } from "react";
+import { projectImageURL } from "../../../../helpers/images";
 import { PageRef } from "../../../../structures/PageRef";
 import { ImageView } from "../../../ImageView/ImageView";
 import "./projects.scss";
@@ -47,8 +48,8 @@ export const Project: FunctionComponent<
       <ImageView
         className="previewImage"
         description={description}
-        src={imgSrc}
-        thumnailSrc={thumbnailImgSrc}
+        src={projectImageURL(imgSrc)}
+        thumnailSrc={projectImageURL(thumbnailImgSrc ?? imgSrc)}
         alt={imgAlt}
         page={page}
         originPath="/design"

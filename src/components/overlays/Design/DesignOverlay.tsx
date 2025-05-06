@@ -6,27 +6,6 @@ import { SmallProject } from "./projects/SmallProject";
 
 import "./DesignOverlay.scss";
 
-import aBetterBurrardPeninsulaSample from "../../../assets/design/projects/a-better-burrard-peninsula-sample.png";
-import bcIntercityTransitVisionBig from "../../../assets/design/projects/bc-intercity-transit-vision-big.png";
-import bcIntercityTransitVisionThumbnail from "../../../assets/design/projects/bc-intercity-transit-vision-thumbnail.png";
-import bpatpEngagementResponse from "../../../assets/design/projects/bpatp-engagement-response.png";
-import calgarysLightRailways from "../../../assets/design/projects/calgary-lrt-1933.png";
-import ferriesOfTheNorthPacificCoastBig from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-big.png";
-import ferriesOfTheNorthPacificCoastThumbnail from "../../../assets/design/projects/ferries-of-the-north-pacific-coast-thumbnail.png";
-import futureVignelliBig from "../../../assets/design/projects/future-vignelli-big.png";
-import futureVignelliThumbnail from "../../../assets/design/projects/future-vignelli-thumbnail.png";
-import kgbSafetyImprovements from "../../../assets/design/projects/kgb-safety-improvements.png";
-import metrotownBusLoopMap from "../../../assets/design/projects/metrotown-bus-loop.png";
-import movementModernThumbnail from "../../../assets/design/projects/movement-modern-thumbnail.png";
-import movementModernBig from "../../../assets/design/projects/movement-modern.png";
-import movementPosters from "../../../assets/design/projects/movement-posters.png";
-import movementThankYouCards from "../../../assets/design/projects/movement-thank-you-cards.png";
-import retroDowntownBusMap from "../../../assets/design/projects/retro-downtown-buses.png";
-import skyremBig from "../../../assets/design/projects/skyrem-big.png";
-import skyremThumbnail from "../../../assets/design/projects/skyrem-thumbnail.png";
-import ttcSkytrainBig from "../../../assets/design/projects/ttc-skytrain-big.png";
-import ttcSkytrainThumbnail from "../../../assets/design/projects/ttc-skytrain-thumbnail.png";
-
 export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
   onHeightChange,
   page,
@@ -57,8 +36,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               the beautiful photos used in this report.
             </p>
           }
-          imgSrc={bpatpEngagementResponse}
-          thumbnailImgSrc={bpatpEngagementResponse}
+          imgSrc={"bpatp-engagement-response.png"}
+          thumbnailImgSrc={"bpatp-engagement-response.png"}
           imgAlt="four pages of a report"
         />
 
@@ -77,8 +56,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               presented to planners from the City of Surrey.
             </p>
           }
-          imgSrc={kgbSafetyImprovements}
-          thumbnailImgSrc={kgbSafetyImprovements}
+          imgSrc={"kgb-safety-improvements.png"}
+          thumbnailImgSrc={"kgb-safety-improvements.png"}
           imgAlt="four pages of a report"
         />
 
@@ -97,8 +76,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               for non-Movementarians who help our cause.
             </p>
           }
-          imgSrc={movementThankYouCards}
-          thumbnailImgSrc={movementThankYouCards}
+          imgSrc={"movement-thank-you-cards.png"}
+          thumbnailImgSrc={"movement-thank-you-cards.png"}
           imgAlt="three thank you cards"
         />
 
@@ -115,8 +94,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               up the pacific coast.
             </p>
           }
-          imgSrc={ferriesOfTheNorthPacificCoastBig}
-          thumbnailImgSrc={ferriesOfTheNorthPacificCoastThumbnail}
+          imgSrc={"ferries-of-the-north-pacific-coast-big.png"}
+          thumbnailImgSrc={"ferries-of-the-north-pacific-coast-thumbnail.png"}
           imgAlt="document cover and pages"
         />
 
@@ -135,8 +114,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               made these three posters for Movement.
             </p>
           }
-          thumbnailImgSrc={movementModernThumbnail}
-          imgSrc={movementModernBig}
+          thumbnailImgSrc={"movement-modern-thumbnail.png"}
+          imgSrc={"movement-modern-big.png"}
           imgAlt="montreal rem map"
         />
 
@@ -157,8 +136,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               .
             </p>
           }
-          imgSrc={bcIntercityTransitVisionBig}
-          thumbnailImgSrc={bcIntercityTransitVisionThumbnail}
+          imgSrc={"bc-intercity-transit-vision-big.png"}
+          thumbnailImgSrc={"bc-intercity-transit-vision-thumbnail.png"}
           imgAlt="document cover and pages"
         />
 
@@ -181,7 +160,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               <a href="https://movementyvr.ca/bptatp">movementyvr.ca/bpatp</a>.
             </p>
           }
-          imgSrc={aBetterBurrardPeninsulaSample}
+          imgSrc={"a-better-burrard-peninsula-sample.png"}
           imgAlt="document cover and pages"
         />
 
@@ -204,7 +183,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               the first map to ignore geographical scale.
             </p>
           }
-          imgSrc={calgarysLightRailways}
+          imgSrc={"calgary-lrt-1933.png"}
           imgAlt="retro style calgary LRT map"
         />
 
@@ -222,7 +201,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               white style of the posters advertising the survey.
             </p>
           }
-          imgSrc={movementPosters}
+          imgSrc={"movement-posters.png"}
           imgAlt="black and white posters"
         />
 
@@ -241,8 +220,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               inspired map for it.
             </p>
           }
-          thumbnailImgSrc={skyremThumbnail}
-          imgSrc={skyremBig}
+          thumbnailImgSrc={"skyrem-thumbnail.png"}
+          imgSrc={"skyrem-big.png"}
           imgAlt="montreal rem map"
         />
 
@@ -253,7 +232,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
           title="Metrotown Bus Loop Map"
           subtitle="In the style of TransLink’s “Where to catch your bus map”"
           year={2023}
-          imgSrc={metrotownBusLoopMap}
+          imgSrc={"metrotown-bus-loop-map.png"}
           imgAlt="metrotown bus loop map"
         />
 
@@ -277,8 +256,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               Vignelli maps.
             </p>
           }
-          thumbnailImgSrc={futureVignelliThumbnail}
-          imgSrc={futureVignelliBig}
+          thumbnailImgSrc={"future-vignelli-thumbnail.png"}
+          imgSrc={"future-vignelli-big.png"}
           imgAlt="70s new york style skytrain map"
         />
 
@@ -296,7 +275,7 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               a map in an older style.
             </p>
           }
-          imgSrc={retroDowntownBusMap}
+          imgSrc={"retro-downtown-buses.png"}
           imgAlt="50s style bus map"
         />
 
@@ -312,8 +291,8 @@ export const DesignOverlay: FunctionComponent<GenericOverlayProps> = ({
               what the SkyTrain map would look like if the TTC designed it.
             </p>
           }
-          thumbnailImgSrc={ttcSkytrainThumbnail}
-          imgSrc={ttcSkytrainBig}
+          thumbnailImgSrc={"ttc-skytrain-thumbnail.png"}
+          imgSrc={"ttc-skytrain-big.png"}
           imgAlt="50s style bus map"
         />
       </div>
